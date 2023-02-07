@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -21,12 +22,12 @@ module.exports = {
 				danger: "#D6222B",
 			},
 			fontFamily: {
-				avenirNext: ["Avenir Next", "sans-serif"],
-				amperzand: ["Amperzand", "sans-serif"],
+				sans: ["Avenir Next", ...defaultTheme.fontFamily.sans],
+				serif: ["Amperzand", ...defaultTheme.fontFamily.serif],
 			},
 			backgroundImage: {
-				perfil: "url(./src/assets/images/pet.png)",
-				iconWhatsapp: "url(./src/assets/images/icon-whatsapp.png)",
+				perfil: "url(/images/pet.png)",
+				iconWhatsapp: "url(/images/icon-whatsapp.png)",
 			},
 		},
 	},

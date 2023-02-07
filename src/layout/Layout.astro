@@ -2,6 +2,7 @@
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import "../index.css";
+import "../fonts.css";
 type Props = {
   namePage: string;
 };
@@ -18,7 +19,7 @@ const { namePage } = Astro.props as Props;
     <meta name="generator" content={Astro.generator} />
     <title>San Martin de Porrez |{namePage}</title>
   </head>
-  <body>
+  <body class="font-sans bg-body">
     <Header />
     <slot />
     <Footer />
