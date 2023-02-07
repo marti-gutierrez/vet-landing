@@ -1,0 +1,50 @@
+---
+import { links } from "./../utils/navLinks";
+import whatsappIcon from "/images/icon-whatsapp.png";
+import facebookIcon from "/images/icon-facebook.png";
+import mapIcon from "/images/icon-map.png";
+import Logo from "./Logo.astro";
+---
+
+<footer class="w-full bg-primary-700 px-4 py-10 lg:px-52 lg:py-8">
+  <section class="md:grid md:grid-flow-col md:gap-8 w-full">
+    <Logo height={64} />
+    <section class="text-white font-bold text-lg mt-10 md:mt-0">
+      <p class="flex gap-4 items-center max-w-[300px]">
+        <img src={mapIcon} alt="icono de ubicación" />
+        Calle Abraham Gonzáles #30, Col. 20 de noviembre, Tulancingo de Bravo
+      </p>
+      <div class="pb-5 max-w-[200px]">
+        <a href="tel:+527751906816" class="flex gap-4 items-center my-4">
+          <img src={whatsappIcon} alt="numero de whats app" />
+          775 190 68 16
+        </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100047715714354"
+          target="_blank"
+          hreflang="es"
+          rel="author"
+          class="flex gap-4 items-center"
+        >
+          <img src={facebookIcon} alt="pagina de facebook" />
+          /SanMartindePorres
+        </a>
+      </div>
+      <a href=""></a>
+    </section>
+    <nav class="grid gap-3">
+      <ul>
+        {
+          links.map((link) => (
+            <li class="text-lg text-white capitalize hover:underline">
+              <a href={link.to}>{link.name}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </section>
+  <p class="mt-6 text-white text-sm font-light">
+    Copyright, 2019-2023,San Martín de Porres, Todos los derechos reservados.
+  </p>
+</footer>

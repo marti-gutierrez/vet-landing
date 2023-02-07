@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Amperzand';
+  src: url("./fonts/Amperzand.woff") format(woff);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("./fonts/AvenirNextLight.woff") format(woff);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("./fonts/AvenirNextBold.woff") format(woff);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("./fonts/AvenirNextRegular.woff") format(woff);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer base {
+  body {
+    @apply font-avenirNext bg-body;
+  }
+
+  h1 {
+    @apply font-amperzand text-4xl text-white;
+  }
+
+  h4 {
+    @apply text-2xl font-bold mb-5 text-center;
+  }
+
+  input[type="radio"] {
+    @apply hidden;
+  }
+}
+
+@layer components {
+  .activeNav {
+    @apply flex items-center bg-primary-700 text-white py-1 px-2 rounded-xl font-bold;
+  }
+}

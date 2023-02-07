@@ -1,0 +1,24 @@
+---
+import { links } from "./../utils/navLinks";
+import Logo from "./Logo.astro";
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+---
+
+<header class="flex justify-between items-center w-full px-4 lg:px-52 py-5">
+  <Logo height={64} />
+  <nav>
+    <ul
+      class="flex items-center gap-6 font-avenirNext capitalize text-lg text-primary-700"
+    >
+      {
+        links.map((link) => (
+          <li class={currentPath === link.to.slice(1) ? "activeNav" : ""}>
+            <a href={link.to}>{link.name}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

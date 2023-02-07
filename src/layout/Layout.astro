@@ -1,0 +1,26 @@
+---
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import "../index.css";
+type Props = {
+  namePage: string;
+};
+const { namePage } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>San Martin de Porrez |{namePage}</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
