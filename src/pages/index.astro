@@ -1,5 +1,10 @@
 ---
+import { Button } from "@components/home/Button";
+import Hero from "@components/home/Hero";
 import Layout from "@layout/Layout.astro";
+import imagePrincipal from "/images/pet.png";
 ---
 
-<Layout namePage="home">hola</Layout>
+<Layout namePage="home">
+  <Hero imageUrl={imagePrincipal}><Button text="Agendar cita" /></Hero>
+</Layout>
