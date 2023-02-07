@@ -1,0 +1,38 @@
+---
+type Props = {
+	name: string;
+	lic: string;
+	mision: string;
+	image: string;
+};
+const { image, lic, mision, name } = Astro.props as Props;
+---
+
+<section class="my-8 lg:mb-20">
+	<h4>Veterinaria</h4>
+
+	<article
+		class="w-full grid gap-6 md:grid-cols-[320px_1fr] place-items-center bg-white px-8 py-4 rounded-xl shadow-xl"
+	>
+		<div>
+			<figure
+				class="w-[188px] h-[188px] grid place-items-center rounded-full bg-gradient-to-r from-primary-500 to-secondary-500"
+			>
+				<img
+					src={image}
+					alt="Foto de Veterinaria Paty "
+					class="w-[180px] h-[180px] object-cover rounded-full object-top border-4 border-white"
+				/>
+			</figure>
+			<h3 class="text-lg text-primary-700 font-bold mb-1">
+				{name}
+			</h3>
+			<span class="text-sm font-light text-left mb-6">
+				{lic}
+			</span>
+		</div>
+		<p>
+			{mision}
+		</p>
+	</article>
+</section>
