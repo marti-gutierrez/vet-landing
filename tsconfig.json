@@ -12,7 +12,10 @@
         "src/layout/*"
       ],
       "@images/*": [
-        "public/images/*"
+        "src/assets/images/*"
+      ],
+      "@fonts/*": [
+        "src/assets/fonts/*"
       ]
     },
   }

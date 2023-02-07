@@ -4,9 +4,14 @@ import { Button } from "@components/home/Button";
 import Hero from "@components/home/Hero";
 import { Services } from "@components/home/Services";
 import Layout from "@layout/Layout.astro";
-import imagePrincipal from "/images/pet.png";
-import BioImage from "/images/bio.jpg";
+import imagePrincipal from "@images/pet.png";
+import BioImage from "@images/bio.jpg";
 import { bioInfo } from "src/utils/config";
+import { Carrusel } from "@components/home/Carrusel";
+
+const posts = await fetch("https://apimocha.com/vetporrez/api/v1/posts").then(
+  (res) => res.json()
+);
 ---
 
 <Layout namePage="home">
@@ -30,5 +35,6 @@ import { bioInfo } from "src/utils/config";
       image={BioImage}
       mision={bioInfo.mision}
     />
+    <Carrusel posts={posts} client:visible />
   </main>
 </Layout>

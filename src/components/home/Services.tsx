@@ -1,7 +1,7 @@
 import { CardService } from "./CardService";
-import iconShop from "/images/iconShop.png";
-import iconEst from "/images/icon-est.png";
-import iconVac from "/images/iconVac.png";
+import iconShop from "@images/iconShop.png";
+import iconEst from "@images/icon-est.png";
+import iconVac from "@images/iconVac.png";
 const services = {
 	shop: {
 		title: "Shop",
