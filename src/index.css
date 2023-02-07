@@ -3,28 +3,28 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Amperzand';
+  font-family: "Amperzand";
   src: url("./fonts/Amperzand.woff") format(woff);
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Avenir Next';
+  font-family: "Avenir Next";
   src: url("./fonts/AvenirNextLight.woff") format(woff);
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Avenir Next';
+  font-family: "Avenir Next";
   src: url("./fonts/AvenirNextBold.woff") format(woff);
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Avenir Next';
+  font-family: "Avenir Next";
   src: url("./fonts/AvenirNextRegular.woff") format(woff);
   font-weight: 400;
   font-style: normal;

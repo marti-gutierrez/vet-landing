@@ -1,10 +1,25 @@
 ---
 import { Button } from "@components/home/Button";
 import Hero from "@components/home/Hero";
+import { Services } from "@components/home/Services";
 import Layout from "@layout/Layout.astro";
 import imagePrincipal from "/images/pet.png";
 ---
 
 <Layout namePage="home">
-  <Hero imageUrl={imagePrincipal}><Button text="Agendar cita" /></Hero>
+  <Hero imageUrl={imagePrincipal}>
+    <Button text="Agendar cita" client:load />
+  </Hero>
+  <main class="lg:mx-52 mx-4 md:mt-20 mt-8">
+    <section class="my-14">
+      <h4>Nuestros Servicios</h4>
+      <ol
+        class="grid gap-4 justify-center grid-cols-[repeat(auto-fit,minmax(320px,1fr))]"
+      >
+        <Services typeCard="shop" />
+        <Services typeCard="consulta" />
+        <Services typeCard="estetica" />
+      </ol>
+    </section>
+  </main>
 </Layout>
