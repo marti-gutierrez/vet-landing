@@ -9,4 +9,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
 	integrations: [react(), tailwind({ config: { applyBaseStyles: false } })],
+	site: "https://marti-gutierrez.github.io",
+	base: "/vet-landing",
 });
