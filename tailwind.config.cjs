@@ -28,6 +28,7 @@ module.exports = {
 			backgroundImage: {
 				perfil: "url(/images/pet.png)",
 				iconWhatsapp: "url(/images/icon-whatsapp.png)",
+				iconClose: "url(/images/icon-close.png)",
 			},
 		},
 	},

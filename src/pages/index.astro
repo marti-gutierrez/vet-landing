@@ -8,6 +8,7 @@ import imagePrincipal from "/images/pet.png";
 import BioImage from "/images/bio.jpg";
 import { bioInfo } from "src/utils/config";
 import { Carrusel } from "@components/home/Carrusel";
+import { Modal } from "@components/home/Modal";
 
 const posts = await fetch("https://apimocha.com/vetporrez/api/v1/posts").then(
   (res) => res.json()
@@ -37,4 +38,5 @@ const posts = await fetch("https://apimocha.com/vetporrez/api/v1/posts").then(
     />
     <Carrusel posts={posts} client:visible />
   </main>
+  <Modal client:load />
 </Layout>
