@@ -1,7 +1,4 @@
 {
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
-  "types": "lib/esm/index.d.ts",
   "name": "@example/minimal",
   "type": "module",
   "version": "0.0.1",
@@ -11,8 +8,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "deploy": "gh-pages -d dist"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/react": "^2.0.2",
@@ -26,8 +22,5 @@
     "react-dom": "^18.0.0",
     "swiper": "^9.0.3",
     "tailwindcss": "^3.0.24"
-  },
-  "devDependencies": {
-    "gh-pages": "^5.0.0"
   }
 }
