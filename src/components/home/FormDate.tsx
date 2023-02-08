@@ -7,10 +7,11 @@ type inputText = {
 type Props = {
 	data: inputText[];
 	onClose: () => void;
+	onChoicePet: () => React.ReactNode;
 	children: (data: inputText) => React.ReactNode;
 };
 
-export function FormDate({ onClose, children, data }: Props) {
+export function FormDate({ onClose, children, data, onChoicePet }: Props) {
 	return (
 		<div className="z-10 fixed grid place-items-center top-0 left-0 w-screen h-screen bg-modal">
 			<section className="w-11/12 max-w-[500px] mt-14 min-h-[100px] bg-slate-100 px-8 py-4 rounded-lg">
@@ -21,12 +22,13 @@ export function FormDate({ onClose, children, data }: Props) {
 					<button
 						type="button"
 						onClick={onClose}
-						className="w-12 h-12 text-2xl text-primary-700"
+						className="flex justify-items items-center w-12 h-12 text-2xl text-primary-700 bg-transparent"
 					>
-						x
+						<i className="bg-iconClose w-6 h-6 bg-no-repeat bg-cover" />
 					</button>
 				</header>
 				<form>
+					{onChoicePet()}
 					{data.map(children)}{" "}
 					<div className="w-full grid grid-cols-2 auto-rows-[48px] gap-4">
 						<button
@@ -38,9 +40,10 @@ export function FormDate({ onClose, children, data }: Props) {
 						</button>
 						<button
 							type="submit"
-							className="bg-primary-700 text-white font-bold text-xl rounded-xl"
+							className="flex items-center justify-center gap-2 bg-primary-700 text-white font-bold text-xl rounded-xl"
 						>
 							Enviar
+							<i className="bg-iconSend w-6 h-6 bg-cover bg-no-repeat" />
 						</button>
 					</div>{" "}
 				</form>

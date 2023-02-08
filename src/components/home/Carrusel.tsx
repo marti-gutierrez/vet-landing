@@ -20,7 +20,9 @@ type Props = {
 function Carrusel({ posts }: Props) {
 	return (
 		<section className="my-12">
-			<h4>Pacientes Sanos y Felices</h4>
+			<h4 className="text-2xl font-bold mb-5 text-center">
+				Pacientes Sanos y Felices
+			</h4>
 			<Swiper
 				effect={"coverflow"}
 				grabCursor={true}

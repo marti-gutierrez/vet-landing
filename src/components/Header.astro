@@ -14,7 +14,13 @@ const currentPath = pathname.slice(1);
     >
       {
         links.map((link) => (
-          <li class={currentPath === link.to.slice(1) ? "activeNav" : ""}>
+          <li
+            class={
+              currentPath === link.to.slice(1)
+                ? "flex items-center bg-primary-700 text-white py-1 px-2 rounded-xl font-bold"
+                : ""
+            }
+          >
             <a href={link.to}>{link.name}</a>
           </li>
         ))
