@@ -8,12 +8,19 @@ type inputText = {
 
 type Props = {
 	data: inputText[];
+	isSubmitting: boolean;
 	onClose: () => void;
 	onChoicePet: () => React.ReactNode;
 	children: (data: inputText) => React.ReactNode;
 };
 
-export function FormDate({ onClose, children, data, onChoicePet }: Props) {
+export function FormDate({
+	onClose,
+	children,
+	data,
+	onChoicePet,
+	isSubmitting,
+}: Props) {
 	return (
 		<div className="z-10 fixed grid place-items-center top-0 left-0 w-screen h-screen bg-modal">
 			<section className="w-11/12 max-w-[500px] mt-14 min-h-[100px] bg-slate-100 px-8 py-4 rounded-lg">
@@ -42,12 +49,13 @@ export function FormDate({ onClose, children, data, onChoicePet }: Props) {
 						</button>
 						<button
 							type="submit"
-							className="flex items-center justify-center gap-2 bg-primary-700 text-white font-bold text-xl rounded-xl"
+							className="flex items-center justify-center gap-2 bg-primary-700 text-white font-bold text-xl disabled:bg-slate-300 disabled:text-slate-500 disabled:border-slate-500 rounded-xl"
+							disabled={isSubmitting}
 						>
 							Enviar
 							<i className="bg-iconSend w-6 h-6 bg-cover bg-no-repeat" />
 						</button>
-					</div>{" "}
+					</div>
 				</Form>
 			</section>
 		</div>

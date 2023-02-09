@@ -4,6 +4,7 @@ import { isModalOpen } from "src/utils/stateNano";
 import { FormDate } from "./FormDate";
 import { InputText } from "@components/formulario/InputText";
 import { InputRadio } from "@components/formulario/InputRadio";
+import { z } from "zod";
 
 const infoInput = [
 	{
@@ -26,12 +27,18 @@ const infoInput = [
 	},
 ];
 
-interface Values {
-	pets: "gato" | "perro" | "otro";
-	user: string;
-	petName: string;
-	description: string;
-}
+const dateSchema = z.object({
+	pets: z.enum(["gato", "perro", "otro"]),
+	user: z.string().min(5, { message: "Ingresa por lo menos 5 caracteres" }),
+	petName: z.string().min(3, { message: "ingresa por lo menos 3 caracteres" }),
+	description: z
+		.string()
+		.min(5, { message: "ingresa por lo menos 5 caracteres" })
+		.max(70, { message: "sobrepasaste la capacidad de 70 caracteres" }),
+});
+
+type date = z.infer<typeof dateSchema>;
+const number = 527751906816;
 
 export function Modal() {
 	const $isModalOpen = useStore(isModalOpen);
@@ -44,17 +51,27 @@ export function Modal() {
 				petName: "",
 				description: "",
 			}}
-			validate={(values: Values) => {
-				if (!values.user) console.log("por Favor ingresa tu nombre");
+			validate={(values: date) => {
+				const result = dateSchema.safeParse(values);
+				if (result.success) return;
+				const errors: Record<string, string> = {};
+				result.error.issues.forEach((error) => {
+					errors[error.path[0]] = error.message;
+				});
+				return errors;
 			}}
-			onSubmit={(values: Values) => {
-				console.log(values);
-				console.log("formulario enviado");
+			onSubmit={(values: date) => {
+				let texto = `Hola mi nombre es ${values.user} tengo un ${values.pets}, se llama ${values.petName}, y tiene ${values.description} quisiera agendar una cita`;
+				let textSend = texto.replace(/\s+/g, "%20");
+				let apiSend = `https://api.whatsapp.com/send?phone=${number}&text=${textSend}`;
+				window.open(apiSend, "_blank");
+				onClose();
 			}}
 		>
-			{({ handleSubmit }) => (
+			{({ isSubmitting }) => (
 				<FormDate
 					onClose={onClose}
+					isSubmitting={isSubmitting}
 					data={infoInput}
 					onChoicePet={() => <InputRadio />}
 				>
