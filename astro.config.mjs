@@ -7,6 +7,10 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
+import robotsTxt from "astro-robots-txt";
+
+// https://astro.build/config
 export default defineConfig({
-	integrations: [react(), tailwind()],
+	site: "https://vetporres.onrender.com/",
+	integrations: [react(), tailwind(), robotsTxt()],
 });

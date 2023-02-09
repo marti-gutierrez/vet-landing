@@ -7,6 +7,7 @@ specifiers:
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
   astro: ^2.0.6
+  astro-robots-txt: ^0.3.12
   formik: ^2.2.9
   nanostores: ^0.7.3
   react: ^18.0.0
@@ -22,6 +23,7 @@ dependencies:
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
   astro: 2.0.6
+  astro-robots-txt: 0.3.12
   formik: 2.2.9_react@18.2.0
   nanostores: 0.7.3
   react: 18.2.0
@@ -890,6 +892,14 @@ packages:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
     dev: false
 
+  /astro-robots-txt/0.3.12:
+    resolution: {integrity: sha512-ydVbhyzxhoCzVCn0eqUdqCMaADG+GOBYE2YGk2unQ4EpqNlvy4HIGOy/XiAHu/n46suXUkYuxHFIOVd3r1zJvA==}
+    dependencies:
+      deepmerge: 4.3.0
+      valid-filename: 4.0.0
+      zod: 3.20.6
+    dev: false
+
   /astro/2.0.6:
     resolution: {integrity: sha512-aI8Ijy2EpMyP5SpjmDJpEUdNL6CUAxnja6IeaBC1BokD/mNAnijtmMnTyWVI3UeEZ727wYLISQMyqCfEUq8VNA==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
@@ -1406,6 +1416,11 @@ packages:
     resolution: {integrity: sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==}
     dependencies:
       reusify: 1.0.4
+    dev: false
+
+  /filename-reserved-regex/3.0.0:
+    resolution: {integrity: sha512-hn4cQfU6GOT/7cFHXBqeBg2TbrMBgdD0kcjLhvSQYYwm3s4B6cjvBfb7nBALJLAXqmU5xajSa7X2NnUud/VCdw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: false
 
   /fill-range/7.0.1:
@@ -3227,6 +3242,13 @@ packages:
       diff: 5.1.0
       kleur: 4.1.5
       sade: 1.8.1
+    dev: false
+
+  /valid-filename/4.0.0:
+    resolution: {integrity: sha512-VEYTpTVPMgO799f2wI7zWf0x2C54bPX6NAfbZ2Z8kZn76p+3rEYCTYVYzMUcVSMvakxMQTriBf24s3+WeXJtEg==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      filename-reserved-regex: 3.0.0
     dev: false
 
   /vfile-location/4.0.1:
