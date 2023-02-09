@@ -1,3 +1,5 @@
+import { Field } from "formik";
+
 type Props = {
 	label: string;
 	use: string;
@@ -10,7 +12,7 @@ export function InputText({ label, placeholder, use }: Props) {
 			<label htmlFor="user" className="block text-slate-700">
 				{label}
 			</label>
-			<input
+			<Field
 				type="text"
 				name={use}
 				id={use}

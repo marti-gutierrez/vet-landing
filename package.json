@@ -17,6 +17,7 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "astro": "^2.0.6",
+    "formik": "^2.2.9",
     "nanostores": "^0.7.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

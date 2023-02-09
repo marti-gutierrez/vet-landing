@@ -1,3 +1,5 @@
+import { Form } from "formik";
+
 type inputText = {
 	label: string;
 	use: string;
@@ -27,9 +29,9 @@ export function FormDate({ onClose, children, data, onChoicePet }: Props) {
 						<i className="bg-iconClose w-6 h-6 bg-no-repeat bg-cover" />
 					</button>
 				</header>
-				<form>
+				<Form>
 					{onChoicePet()}
-					{data.map(children)}{" "}
+					{data.map(children)}
 					<div className="w-full grid grid-cols-2 auto-rows-[48px] gap-4">
 						<button
 							type="button"
@@ -46,7 +48,7 @@ export function FormDate({ onClose, children, data, onChoicePet }: Props) {
 							<i className="bg-iconSend w-6 h-6 bg-cover bg-no-repeat" />
 						</button>
 					</div>{" "}
-				</form>
+				</Form>
 			</section>
 		</div>
 	);
