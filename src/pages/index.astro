@@ -15,7 +15,10 @@ const posts = await fetch("https://apimocha.com/vetporrez/api/v1/posts").then(
 );
 ---
 
-<Layout namePage="home">
+<Layout
+  namePage="home"
+  description="Veterinaria en Tulancingo San martin de porres, con servicios de vacunas, desparasitantes, consultas, baño dermatológico, pensión entre otros"
+>
   <Hero imageUrl={imagePrincipal}>
     <Button text="Agendar cita" client:load />
   </Hero>

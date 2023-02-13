@@ -4,8 +4,9 @@ import Header from "@components/Header.astro";
 import "../fonts.css";
 type Props = {
   namePage: string;
+  description: string;
 };
-const { namePage } = Astro.props as Props;
+const { namePage, description } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -13,10 +14,17 @@ const { namePage } = Astro.props as Props;
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <title>Veterinaria San Martin de Porrez |{namePage}</title>
+    <title>Veterinaria San Martin de Porres |{namePage}</title>
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="veterinaria,tulancingo,consultas medicas para perros y gatos"
+    />
   </head>
   <body class="font-sans bg-body">
     <Header />
