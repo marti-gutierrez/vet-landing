@@ -1,0 +1,686 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "frijol",
+      "owner": "lucy gutierrez",
+      "comment": "He hido varias veces a consulta, por pelear con gatos por mis terrenos, pero gracias a la veterinaria siempre me recupero y tambien me compran mi alimento en la veterinaria",
+      "urlImage": "https://i.imgur.com/B5HsIPD.jpg"
+    },
+    {
+      "id": 2,
+      "title": "clara",
+      "owner": "liri misouri",
+      "comment": "Despues de mi visita a la veterinaria para desparasitarme, me siento más liviana y lista para continuar mi aventura",
+      "urlImage": "https://i.imgur.com/ujTXTRv.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Huskys Siberianos",
+      "owner": "Andi",
+      "comment": "Aullando juntos mientras ibamos a la veterinaria, ahora ladrando contentos y moviendo nuestra colas, nos sentimos renovados  después de desparasitarnos y vacunarnos",
+      "urlImage": "https://i.imgur.com/D08kdVV.jpg"
+    },
+    {
+      "id": 4,
+      "title": " Bruno",
+      "owner": "Mariana",
+      "comment": "Ladrando fuerte, me siento agradecido con la veterinaria por tratar mi enfermedad respiratoria y darme una oportunidad de recuperarme",
+      "urlImage": "https://i.imgur.com/VDfDeta.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Jerry",
+      "owner": "Rubi",
+      "comment": "Ronroneando suavemente, estoy agradecido con la veterinaria por esterilizarme y permitirme vivir una vida más saludable y tranquila.",
+      "urlImage": "https://i.imgur.com/TnuuRbi.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Mantequilla",
+      "owner": "Carmen",
+      "comment": "Rasguñando mi cama cómodo, estoy agradecido con la veterinaria por venir a aplicarme la vacuna anti-rabia sin tener que salir de mi hogar, me siento protegido y seguro ahora",
+      "urlImage": "https://i.imgur.com/8N2m4D0.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Chato",
+      "owner": "Carmen",
+      "comment": "Gruñendo suavemente, me siento afortunado de tener a la veterinaria cuidándome en mi estadía aquí. Aunque extraño a mis dueños, sé que estoy en buenas manos y me cuidan bien.",
+      "urlImage": "https://i.imgur.com/LpZrPdr.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Nicky",
+      "owner": "Sra. Magy",
+      "comment": "Ronroneando de alivio, estoy agradecido con el veterinario por tratar mis problemas gastrointestinales y permitirme sentirme mejor y disfrutar de mi vida de gato de nuevo.",
+      "urlImage": "https://i.imgur.com/VtapTK3.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Kitty",
+      "owner": "Patricia Velazco",
+      "comment": "Ronroneando fuerte, agradezco a la veterinaria por brindarme un hogar, cuidados y amor. Estoy feliz y agradecida.",
+      "urlImage": "https://i.imgur.com/4yFeOm0.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Pro plan sterilized",
+      "description": "alimento para gato esterilizado 3kg",
+      "price": 750,
+      "image": "https://purina.com.mx/sites/default/files/styles/simple_card/public/2022-08/Gato_Sterilize_Frente_Pro_Plan.png.webp?itok=wpQ3JSLm",
+      "category": {
+        "id": 1,
+        "name": "alimentos"
+      },
+      "pet": "gato"
+    },
+    {
+      "id": 2,
+      "title": "Pro plan sterilized",
+      "description": "alimento para gato esterilizado 7.5kg",
+      "price": 1585,
+      "image": "https://purina.com.mx/sites/default/files/styles/simple_card/public/2022-08/Gato_Sterilize_Frente_Pro_Plan.png.webp?itok=wpQ3JSLm",
+      "category": {
+        "id": 1,
+        "name": "alimentos"
+      },
+      "pet": "gato"
+    },
+    {
+      "id": 3,
+      "title": "Pro plan LiveClear",
+      "description": "recomendado para personas alergicas a gatos 1.59kg",
+      "price": 460,
+      "image": "https://www.purina-latam.com/sites/default/files/styles/kraken_generic_max_width_960/public/2021-08/purina-pro-plan-live-clear.png?itok=VWYst0JD",
+      "category": {
+        "id": 1,
+        "name": "alimentos"
+      },
+      "pet": "gato"
+    },
+    {
+      "id": 4,
+      "title": "Nupec",
+      "description": "bolsas de 1kg",
+      "price": 120,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2x1onPsDrEJzfGx5gcHpIPHkQr0xYmmab5Bqd_6Hxv6TwxEKjTDepCYYIRmT6gU8qOFM&usqp=CAU",
+      "category": {
+        "id": 1,
+        "name": "alimentos"
+      },
+      "pet": "gato"
+    },
+    {
+      "id": 5,
+      "title": "Royal Canin",
+      "description": "alimento humedo para nutrir el pelo y mantener un pelaje brillante de 145gr",
+      "price": 75,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOhqMcXkcPhcczpksHIf3pFfaewXldKK4zNO2n1fJ9BK5hDFlkTW-MM6bKpwwWXFuyYBY&usqp=CAU",
+      "category": {
+        "id": 1,
+        "name": "alimentos"
+      },
+      "pet": "gato"
+    },
+    {
+      "id": 6,
+      "title": "Pro plan CN",
+      "description": "alimento humedo diseñado para apoyo nutricional 156gr",
+      "price": 75,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDoHgIgnshemp7u93nklsOYQajJZDPgrVI-w&usqp=CAU",
+      "category": {
+        "id": 1,
+        "name": "alimentos"
+      },
+      "pet": "gato"
+    },
+    {
+      "id": 7,
+      "title": "Pro plan delicate structure",
+      "description": "nutricion que fortalece huesos, dientes y la delicada piel de su perro, 3kg",
+      "price": 720,
+      "image": "https://m.media-amazon.com/images/I/51MzUVwE6vL._AC_SX522_.jpg",
+      "category": {
+        "id": 1,
+        "name": "alimentos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 8,
+      "title": "Nupec: cachorros y razas pequeñas",
+      "description": "alimento para perros, bolsas de 1kg",
+      "price": 120,
+      "image": "https://m.media-amazon.com/images/I/61RmHJcduXL.__AC_SX300_SY300_QL70_ML2_.jpg",
+      "category": {
+        "id": 1,
+        "name": "alimentos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 9,
+      "title": "Nupec:Adultos y razas pequeñas",
+      "description": "alimento para perros, bolsas de 1kg",
+      "price": 120,
+      "image": "https://m.media-amazon.com/images/I/71BBNArFhIL.__AC_SX300_SY300_QL70_ML2_.jpg",
+      "category": {
+        "id": 1,
+        "name": "alimentos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 10,
+      "title": "Royal Canin",
+      "description": "alimento humeda para pacientes con problemas gastrointestinales,385gr",
+      "price": 92,
+      "image": "https://www.petco.com.mx/medias/?context=bWFzdGVyfGltYWdlc3wyNTQ0OTZ8aW1hZ2UvanBlZ3xpbWFnZXMvaDhiL2hlZi85MzUzMzM3MTEwNTU4LmpwZ3xkYTM0NTg3MTFmZDgyMDQ4ZWFjOGQzNzBkMDdlOGEzM2I4ZjQ5NmVhN2I3YWYwOTY4OWJmMGViMDZhZjMyN2Zm",
+      "category": {
+        "id": 1,
+        "name": "alimentos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 11,
+      "title": "juguetes chillones",
+      "description": "variedad de juguetes chillones",
+      "price": 35,
+      "image": "https://m.media-amazon.com/images/I/618e7g46FhL.__AC_SX300_SY300_QL70_ML2_.jpg",
+      "category": {
+        "id": 2,
+        "name": "juguetes y accesorios"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 12,
+      "title": "pelotas",
+      "description": "pelotas para perro",
+      "price": 68,
+      "image": "https://m.media-amazon.com/images/I/71OGHcUuSQL._AC_SY355_.jpg",
+      "category": {
+        "id": 2,
+        "name": "juguetes y accesorios"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 13,
+      "title": "juguete con pluma",
+      "description": "juguete para gatos",
+      "price": 20,
+      "image": "https://m.media-amazon.com/images/I/51Mf6qf2nZL.__AC_SX300_SY300_QL70_ML2_.jpg",
+      "category": {
+        "id": 2,
+        "name": "juguetes y accesorios"
+      },
+      "pet": "gato"
+    },
+    {
+      "id": 16,
+      "title": "juguete interactivo",
+      "description": "juguete para gatos",
+      "price": 180,
+      "image": "https://m.media-amazon.com/images/I/51i1kexORjL.__AC_SX300_SY300_QL70_ML2_.jpg",
+      "category": {
+        "id": 2,
+        "name": "juguetes y accesorios"
+      },
+      "pet": "gato"
+    },
+    {
+      "id": 17,
+      "title": "galletas TRICK&TREATS",
+      "description": "galleta para perro, 1 pieza",
+      "price": 1,
+      "image": "https://cdn.shopify.com/s/files/1/0829/9275/products/trick_treats_gourmet_bakes_sabor_pay_de_manzana_grande.png?v=1640808370",
+      "category": {
+        "id": 2,
+        "name": "juguetes y accesorios"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 18,
+      "title": "galletas TRICK&TREATS",
+      "description": "premios para gato, 80gr",
+      "price": 60,
+      "image": "https://m.media-amazon.com/images/I/61Ep-x6s11S._AC_SX466_.jpg",
+      "category": {
+        "id": 2,
+        "name": "juguetes y accesorios"
+      },
+      "pet": "gato"
+    },
+    {
+      "id": 18,
+      "title": "EcoCat",
+      "description": "Arena para gato,en la compra de esta arena ayudas a rescatar gatitos de la calle,910gr",
+      "price": 21,
+      "image": "https://elpucheretedemari.com/wp-content/uploads/2019/07/galletasperropolloreducida.jpg",
+      "category": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": 19,
+      "title": "vacunas caninas",
+      "description": "1er vacuna",
+      "price": 270,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 20,
+      "title": "vacunas caninas",
+      "description": "2da vacuna",
+      "price": 280,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 21,
+      "title": "vacunas caninas",
+      "description": "3ra vacuna o vacuna anual",
+      "price": 290,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 22,
+      "title": "vacunas caninas",
+      "description": "vacuna anual más rabia",
+      "price": 320,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 23,
+      "title": "vacunas caninas",
+      "description": "Vacuna de Bordetella",
+      "price": 220,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 24,
+      "title": "vacunas caninas",
+      "description": "Vacuna de rabia",
+      "price": 120,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 25,
+      "title": "vacunas felinas",
+      "description": "Vacuna triple fenina",
+      "price": 270,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "gato"
+    },
+    {
+      "id": 26,
+      "title": "vacunas felinas",
+      "description": "Vacuna de leucemia",
+      "price": 315,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "gato"
+    },
+    {
+      "id": 27,
+      "title": "vacunas felinas",
+      "description": "Prueba de SIDA/Leucemia",
+      "price": 650,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "gato"
+    },
+    {
+      "id": 28,
+      "title": "vacunas felinas",
+      "description": "Vacuna de rabia",
+      "price": 270,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "gato"
+    },
+    {
+      "id": 29,
+      "title": "desparasitaciones",
+      "description": "consulta, copeoparasitologico y medicamento en un solo cachorro",
+      "price": 150,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 30,
+      "title": "desparasitaciones",
+      "description": "consulta, copeoparasitologico y medicamento por camada (dependiendo num. cachorros)",
+      "price": [
+        60,
+        80
+      ],
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 31,
+      "title": "desparasitaciones",
+      "description": "consulta, copeoparasitologico y medicamento en adultos",
+      "price": 380,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 32,
+      "title": "hospitalizacion",
+      "description": "Hospitalización primera noche",
+      "price": 650,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "both"
+    },
+    {
+      "id": 33,
+      "title": "hospitalizacion",
+      "description": "Hospitalización segunda noche",
+      "price": 550,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "both"
+    },
+    {
+      "id": 34,
+      "title": "hospitalizacion",
+      "description": "consulta urgencia (A partir de las 10:00 pm)",
+      "price": [
+        250,
+        500
+      ],
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "both"
+    },
+    {
+      "id": 35,
+      "title": "limpieza dental",
+      "description": "limpieza dental perro menor de 5kg",
+      "price": 650,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 36,
+      "title": "limpieza dental",
+      "description": "limpieza dental perro de 5kg a 10kg",
+      "price": 850,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 37,
+      "title": "limpieza dental",
+      "description": "limpieza dental perro de 10kg a 15kg",
+      "price": 1500,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 38,
+      "title": "limpieza dental",
+      "description": "limpieza dental perro de 15kg a 20kg",
+      "price": 1800,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 39,
+      "title": "limpieza dental",
+      "description": "limpieza dental perro de 20kg a 30kg",
+      "price": 2100,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 40,
+      "title": "esterilizacion",
+      "description": "esterilizacion gato macho",
+      "price": 550,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "gato"
+    },
+    {
+      "id": 41,
+      "title": "esterilizacion",
+      "description": "esterilizacion gato hembra",
+      "price": 950,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "gato"
+    },
+    {
+      "id": 42,
+      "title": "esterilizacion",
+      "description": "esterilizacion perro menor a 5kg",
+      "price": 650,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 43,
+      "title": "esterilizacion",
+      "description": "esterilizacion perro de 5kg a 10kg",
+      "price": 850,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 44,
+      "title": "esterilizacion",
+      "description": "esterilizacion perro de 10kg a 15kg",
+      "price": 850,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 45,
+      "title": "esterilizacion",
+      "description": "esterilizacion perra hasta 5kg",
+      "price": 950,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 46,
+      "title": "esterilizacion",
+      "description": "esterilizacion perra de 6kg a 10kg",
+      "price": 1250,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 47,
+      "title": "baño",
+      "description": "perro extra chico (cachorros)",
+      "price": [
+        100,
+        120
+      ],
+      "image": "",
+      "category": {
+        "id": 4,
+        "name": "servicio estetica"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 48,
+      "title": "corte",
+      "description": "perro extra chico (cachorros)",
+      "price": 150,
+      "image": "",
+      "category": {
+        "id": 4,
+        "name": "servicio estetica"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 49,
+      "title": "baño",
+      "description": "perro chico (chihuahua)",
+      "price": [
+        120,
+        130
+      ],
+      "image": "",
+      "category": {
+        "id": 4,
+        "name": "servicio estetica"
+      },
+      "pet": "perro"
+    },
+    {
+      "id": 50,
+      "title": "corte",
+      "description": "perro chico (chihuahua)",
+      "price": 170,
+      "image": "",
+      "category": {
+        "id": 4,
+        "name": "servicio estetica"
+      },
+      "pet": "perro"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "alimentos"
+    },
+    {
+      "id": 2,
+      "title": "juguetes y accesorios"
+    },
+    {
+      "id": 3,
+      "title": "servicios medicos"
+    },
+    {
+      "id": 4,
+      "title": "servicio estetica"
+    }
+  ]
+}
