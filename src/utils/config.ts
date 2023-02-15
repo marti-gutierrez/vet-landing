@@ -1,4 +1,7 @@
-export const links = [{ to: "/", name: "home" }];
+export const links = [
+	{ to: "/", name: "home" },
+	{ to: "/shop", name: "servicios" },
+];
 
 export const bioInfo = {
 	name: "MVZ.Patricia Velasco Hdez",
