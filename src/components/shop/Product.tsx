@@ -3,14 +3,14 @@
 type Props = {
 	name: string;
 	info: string;
-	urlImg: string;
-	price: number;
+	urlImg?: string;
+	price: number | number[];
 };
 
 function Product({ name, urlImg, info, price }: Props) {
 	return (
-		<article className="grid gap-4 grid-cols-[54px_1fr_70px] items-center p-4 w-full h-max bg-white rounded-xl shadow-xl">
-			<figure className="w-14 h-14 bg-slate-300 rounded-full">
+		<article className="grid gap-4 grid-cols-[54px_1fr_120px] items-center p-4 w-full h-max bg-white rounded-xl shadow-xl">
+			<figure className="w-14 h-14 bg-slate-50 rounded-full">
 				<img
 					src={urlImg}
 					alt={name}
@@ -21,7 +21,13 @@ function Product({ name, urlImg, info, price }: Props) {
 				<h2 className="block text-lg capitalize my-0">{name}</h2>
 				<p className="block text-sm font-light my-0">{info}</p>
 			</section>
-			<span className="text-lg font-bold">${price} MXN</span>
+			{Array.isArray(price) ? (
+				<span className="text-lg font-bold justify-self-end">
+					${price[0]} a ${price[1]} MXN{" "}
+				</span>
+			) : (
+				<span className="text-lg font-bold justify-self-end">${price} MXN</span>
+			)}
 		</article>
 	);
 }

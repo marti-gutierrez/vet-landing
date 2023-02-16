@@ -9,19 +9,25 @@ import {
 	Squares2X2Icon,
 } from "@heroicons/react/20/solid";
 import { Product } from "./Product";
+import {
+	apiProducts,
+	getProducts,
+	getProductsFilter,
+} from "src/utils/apiFetch";
 
 const sortOptions = [
-	{ name: "gatos", href: "#gato", current: false },
-	{ name: "perros", href: "#perro", current: false },
+	{ name: "gato", href: "#gato", current: false },
+	{ name: "perro", href: "#perro", current: false },
 ];
 const subCategories = [
-	{ name: "Alimentos", href: "#" },
-	{ name: "Juguetes y Accesorios", href: "#" },
+	{ name: "Alimentos", value: "1" },
+	{ name: "Juguetes y Accesorios", value: "2" },
 ];
 const filters = [
 	{
 		id: "serviciosMedicos",
 		name: "Servicios Médicos",
+		value: "3",
 		options: [
 			{ value: "consulta", label: "Consultas", checked: false },
 			{ value: "vacunas", label: "Vacunas", checked: false },
@@ -33,6 +39,7 @@ const filters = [
 	{
 		id: "serviciosEstetica",
 		name: "Servicio Estética",
+		value: "4",
 		options: [
 			{ value: "baño", label: "baño", checked: false },
 			{ value: "corte", label: "corte", checked: false },
@@ -45,21 +52,22 @@ function classNames(...classes) {
 }
 
 export function CategoryFilter() {
-	useEffect(async () => {
-		const data = await fetch(
-			"http://localhost:3000/products?category.id=1&pet=gato",
-		).then((res) => res.json());
-		setProducts(data);
-	}, []);
+	const [service, setService] = useState("1");
+	const [filter, setFilter] = useState<"gato" | "perro">("gato");
+	useEffect(() => {
+		const fetchData = async () => {
+			const data = await getProductsFilter(service, filter);
+			setProducts(data);
+		};
+		fetchData();
+	}, [service, filter]);
 
 	const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 	const handleChangeService = (e: React.ChangeEvent<HTMLInputElement>) =>
 		setService(e.target.value);
 	const handleChangeFilter = (e: React.ChangeEvent<HTMLInputElement>) =>
 		setFilter(e.target.value);
-	const [products, setProducts] = useState([]);
-	const [service, setService] = useState("Alimentos");
-	const [filter, setFilter] = useState("gatos");
+	const [products, setProducts] = useState<apiProducts[]>([]);
 	return (
 		<div className="bg-body">
 			<div>
@@ -119,11 +127,11 @@ export function CategoryFilter() {
 													<input
 														type="radio"
 														name="category"
-														value={category.name}
+														value={category.value}
 														id={category.name}
 														className="peer hidden"
 														onChange={handleChangeService}
-														checked={service === category.name}
+														checked={service === category.value}
 													/>
 													<label
 														htmlFor={category.name}
@@ -148,9 +156,9 @@ export function CategoryFilter() {
 																		name="category"
 																		id={section.name}
 																		className="hidden peer"
-																		value={section.name}
+																		value={section.value}
 																		onChange={handleChangeService}
-																		checked={service === section.name}
+																		checked={service === section.value}
 																	/>
 																	<label
 																		htmlFor={section.name}
@@ -318,11 +326,11 @@ export function CategoryFilter() {
 											<input
 												type="radio"
 												name="category"
-												value={category.name}
+												value={category.value}
 												id={category.name}
 												className="peer hidden"
 												onChange={handleChangeService}
-												checked={service === category.name}
+												checked={service === category.value}
 											/>
 											<label
 												htmlFor={category.name}
@@ -348,9 +356,9 @@ export function CategoryFilter() {
 																	name="category"
 																	id={section.name}
 																	className="hidden peer"
-																	value={section.name}
+																	value={section.value}
 																	onChange={handleChangeService}
-																	checked={service === section.name}
+																	checked={service === section.value}
 																/>
 																<label
 																	htmlFor={section.name}
@@ -409,7 +417,7 @@ export function CategoryFilter() {
 							{/* Product grid */}
 							<div className="lg:col-span-3">
 								{/* Replace with your content */}
-								<div className="h-96 rounded-lg border-4 border-dashed border-gray-200 lg:h-full w-full grid gap-2 overflow-y-auto">
+								<div className="h-max rounded-lg border-4 border-dashed border-gray-200 lg:h-full w-full grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-2 place-content-start">
 									{products.map((item) => (
 										<Product
 											key={item.id}
