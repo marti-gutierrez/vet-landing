@@ -1,9 +1,10 @@
 //import { RiShoppingBasket2Fill } from "react-icons/ri";
+import vaccunImg from "/images/iconShop.png";
 
 type Props = {
 	name: string;
 	info: string;
-	urlImg?: string;
+	urlImg: string;
 	price: number | number[];
 };
 
@@ -12,9 +13,9 @@ function Product({ name, urlImg, info, price }: Props) {
 		<article className="grid gap-4 grid-cols-[54px_1fr_120px] items-center p-4 w-full h-max bg-white rounded-xl shadow-xl">
 			<figure className="w-14 h-14 bg-slate-50 rounded-full">
 				<img
-					src={urlImg}
+					src={urlImg.length < 1 ? vaccunImg : urlImg}
 					alt={name}
-					className="w-full h-full object-contain rounded-full"
+					className="w-full h-full object-cover rounded-full"
 				/>
 			</figure>
 			<section className="">

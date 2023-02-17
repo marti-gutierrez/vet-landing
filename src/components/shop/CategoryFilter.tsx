@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import {
@@ -9,37 +9,31 @@ import {
 	Squares2X2Icon,
 } from "@heroicons/react/20/solid";
 import { Product } from "./Product";
-import {
-	apiProducts,
-	getProducts,
-	getProductsFilter,
-} from "src/utils/apiFetch";
+import { useFilter } from "src/hooks/useFilterApi";
+import { optional } from "zod";
 
-const sortOptions = [
-	{ name: "gato", href: "#gato", current: false },
-	{ name: "perro", href: "#perro", current: false },
-];
+const sortOptions = [{ name: "gato" }, { name: "perro" }];
 const subCategories = [
-	{ name: "Alimentos", value: "1" },
-	{ name: "Juguetes y Accesorios", value: "2" },
+	{ name: "Alimentos", value: "alimentos" },
+	{ name: "Juguetes y Accesorios", value: "juguetes y accesorios" },
 ];
 const filters = [
 	{
 		id: "serviciosMedicos",
 		name: "Servicios Médicos",
-		value: "3",
+		value: "servicio medico",
 		options: [
-			{ value: "consulta", label: "Consultas", checked: false },
-			{ value: "vacunas", label: "Vacunas", checked: false },
-			{ value: "desparasitacion", label: "Desparasitación", checked: true },
-			{ value: "limpiezaDental", label: "Limpieza Dental", checked: false },
-			{ value: "esterilizacion", label: "Esterilizaciones", checked: false },
+			{ value: "consulta", label: "Consultas" },
+			{ value: "vacuna", label: "Vacunas" },
+			{ value: "desparasitacion", label: "Desparasitación" },
+			{ value: "limpiezaDental", label: "Limpieza Dental" },
+			{ value: "esterilizacion", label: "Esterilizaciones" },
 		],
 	},
 	{
 		id: "serviciosEstetica",
 		name: "Servicio Estética",
-		value: "4",
+		value: "servicio estetico",
 		options: [
 			{ value: "baño", label: "baño", checked: false },
 			{ value: "corte", label: "corte", checked: false },
@@ -50,24 +44,26 @@ const filters = [
 function classNames(...classes) {
 	return classes.filter(Boolean).join(" ");
 }
+type event = React.ChangeEvent<HTMLInputElement>;
 
 export function CategoryFilter() {
-	const [service, setService] = useState("1");
-	const [filter, setFilter] = useState<"gato" | "perro">("gato");
-	useEffect(() => {
-		const fetchData = async () => {
-			const data = await getProductsFilter(service, filter);
-			setProducts(data);
-		};
-		fetchData();
-	}, [service, filter]);
+	const {
+		changeCategory,
+		changeFilter,
+		addSubCategory,
+		products,
+		service,
+		filter,
+		subFilter,
+	} = useFilter();
 
 	const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-	const handleChangeService = (e: React.ChangeEvent<HTMLInputElement>) =>
-		setService(e.target.value);
-	const handleChangeFilter = (e: React.ChangeEvent<HTMLInputElement>) =>
-		setFilter(e.target.value);
-	const [products, setProducts] = useState<apiProducts[]>([]);
+	const handleChangeService = (e: event) => changeCategory(e.target.value);
+
+	const handleChangeFilter = (e: event) => changeFilter(e.target.value);
+	const handleSubfilter = (e: event) => {
+		addSubCategory(e.target.value, e.target.checked);
+	};
 	return (
 		<div className="bg-body">
 			<div>
@@ -194,10 +190,11 @@ export function CategoryFilter() {
 																			<input
 																				id={`filter-mobile-${section.id}-${optionIdx}`}
 																				name={`${section.id}[]`}
-																				defaultValue={option.value}
-																				type="radio"
-																				defaultChecked={option.checked}
+																				value={option.value}
+																				type="checkbox"
+																				checked={subFilter[option.value]}
 																				className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+																				onChange={handleSubfilter}
 																			/>
 																			<label
 																				htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
@@ -392,10 +389,11 @@ export function CategoryFilter() {
 																	<input
 																		id={`filter-${section.id}-${optionIdx}`}
 																		name={`${section.id}[]`}
-																		defaultValue={option.value}
+																		value={option.value}
 																		type="checkbox"
-																		defaultChecked={option.checked}
+																		checked={subFilter[option.value]}
 																		className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+																		onChange={handleSubfilter}
 																	/>
 																	<label
 																		htmlFor={`filter-${section.id}-${optionIdx}`}

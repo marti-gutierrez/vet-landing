@@ -663,6 +663,33 @@
         "name": "servicio estetica"
       },
       "pet": "perro"
+    },
+    {
+      "id": 51,
+      "title": "baño",
+      "description": "gatitos chicos, menores de 6 meses",
+      "price": [
+        80,
+        120
+      ],
+      "image": "",
+      "category": {
+        "id": 4,
+        "name": "servicio estetica"
+      },
+      "pet": "gato"
+    },
+    {
+      "id": 52,
+      "title": "consulta",
+      "description": "consulta general",
+      "price": 200,
+      "image": "",
+      "category": {
+        "id": 3,
+        "name": "servicios medicos"
+      },
+      "pet": "both"
     }
   ],
   "categories": [
