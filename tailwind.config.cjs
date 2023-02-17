@@ -26,7 +26,7 @@ module.exports = {
 				serif: ["Amperzand", ...defaultTheme.fontFamily.serif],
 			},
 			backgroundImage: {
-				perfil: "url(/images/pet.png)",
+				perfil: "url(/images/perfil2.png)",
 				iconWhatsapp: "url(/images/icon-whatsapp.png)",
 				iconClose: "url(/images/delete.svg)",
 				iconSend: "url(/images/icon-send.png)",

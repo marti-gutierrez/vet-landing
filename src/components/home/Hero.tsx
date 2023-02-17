@@ -21,19 +21,26 @@ export default function Hero({ imageUrl, children }: Props): JSX.Element {
 					className="col-span-full row-span-full w-full h-full object-cover"
 				/>
 				<figcaption className="row-start-6 row-end-7 col-start-[-2] col-end-[-1] w-full text-white text-xs place-self-end mb-4">
-					Foto de
-					<a
-						href="https://unsplash.com/@charlesdeluvio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-						className="text-slate-300 font-bold"
-					>
-						charlesdeluvio
-					</a>
-					en
-					<a href="https://unsplash.com/es/fotos/DziZIYOGAHc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+					Foto de{" "}
+					<a href="https://unsplash.com/@anushabarwa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+						Anusha Barwa
+					</a>{" "}
+					en{" "}
+					<a href="https://unsplash.com/es/fotos/ppKcYi1CXcI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
 						Unsplash
 					</a>
 				</figcaption>
 			</figure>
+			<figcaption className="absolute bottom-0 left-3 text-slate-300 text-xs font-light md:hidden">
+				Foto de{" "}
+				<a href="https://unsplash.com/@anushabarwa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+					Anusha Barwa
+				</a>{" "}
+				en{" "}
+				<a href="https://unsplash.com/es/fotos/ppKcYi1CXcI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+					Unsplash
+				</a>
+			</figcaption>
 		</aside>
 	);
 }
