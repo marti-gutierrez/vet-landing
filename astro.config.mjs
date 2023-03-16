@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import { sitemap } from "@astrojs/sitemap";
 
 // https://astro.build/config
 import react from "@astrojs/react";
@@ -11,6 +12,6 @@ import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://vetporres.onrender.com/",
-	integrations: [react(), tailwind(), robotsTxt()],
+	site: "https://sanmartin.lat",
+	integrations: [react(), tailwind(), robotsTxt(),sitemap()],
 });

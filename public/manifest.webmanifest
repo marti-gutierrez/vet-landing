@@ -1,0 +1,11 @@
+{
+  "name": "San martin de Porres",
+  "short_name": "san martin Veterinaria",
+  "theme_color": "#008EA5",
+  "background_color": "#f5f5f5",
+  "display": "browser",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "description": "veterinaria San martin de porrez ubicada en tulancingo"
+}
